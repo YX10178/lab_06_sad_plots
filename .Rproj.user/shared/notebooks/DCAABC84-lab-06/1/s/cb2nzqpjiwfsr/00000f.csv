@@ -2,3 +2,4 @@
 "0","library(dsbox)"
 "0","library(mosaicData) "
 "0","staff <- read_csv(""data/instructional-staff.csv"")"
+"0","##Each row in this dataset represents a faculty type, and the columns are the years for which we have data. The values are percentage of hires of that type of faculty for each year."

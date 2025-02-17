@@ -3,7 +3,7 @@
     "path": "~/Desktop/datascience/lab_06_sad_plots/lab-06.Rmd",
     "project_path": "lab-06.Rmd",
     "type": "r_markdown",
-    "hash": "4027575165",
+    "hash": "3760323543",
     "contents": "",
     "dirty": false,
     "created": 1739802594988.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "19,0",
-        "scrollLine": "12"
+        "cursorPosition": "57,28",
+        "scrollLine": "46"
     },
     "folds": "",
-    "lastKnownWriteTime": 1739811390,
+    "lastKnownWriteTime": 1739817427,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1739811390867,
+    "last_content_update": 1739817427857,
     "read_only": false,
     "read_only_alternatives": []
 }
