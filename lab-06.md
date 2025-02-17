@@ -99,6 +99,70 @@ staff_long %>%
 
 ### Exercise 3
 
+``` r
+fisheries <- read_csv("data/fisheries.csv")
+```
+
+    ## Rows: 216 Columns: 4
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (1): country
+    ## dbl (3): capture, aquaculture, total
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+``` r
+#(1) in the pie chart, there are too many small categories, hard to tell 
+#(2) the color is ugly...
+#(3) Combining all countries into one chart makes it messy. only select the top 10 countries to compare would be more clear 
+
+
+fisheries_long <- fisheries %>%
+  pivot_longer(cols = c("capture", "aquaculture"), names_to = "type", values_to = "value")
+
+top_10 <- fisheries %>%
+  arrange(desc(total)) %>%
+  slice(1:10)
+
+top_10 <- top_10 %>%
+  mutate(percentage_capture = capture / sum(capture) * 100)
+
+top_10 <- top_10 %>%
+  mutate(percentage_aquaculture = aquaculture / sum(aquaculture) * 100)
+
+
+ggplot(top_10, aes(x = "", y = "", fill = country)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +  # Convert to pie chart
+  geom_text(aes(label = paste0(round(percentage_capture, 1), "%")), 
+            position = position_stack(vjust = 0.5)) + #adds percentage labels      inside the chart.
+  labs(
+    title = "Capture Fisheries - Top 10 Countries",
+    fill = "Country"
+  ) +
+  theme_minimal()+
+  theme(axis.text = element_blank(), axis.ticks = element_blank()) # removes x- and y-axis text/ticks.
+```
+
+![](lab-06_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+``` r
+ggplot(top_10, aes(x = "", y = aquaculture, fill = country)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +  # Convert to pie chart
+  geom_text(aes(label = paste0(round(percentage_aquaculture, 1), "%")), 
+            position = position_stack(vjust = 0.5)) +
+  labs(
+    title = "Aquaculture - Top 10 Countries",
+    fill = "Country"
+  ) +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank())
+```
+
+![](lab-06_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+
 ### Exercise 4
 
 ### Exercise 5
