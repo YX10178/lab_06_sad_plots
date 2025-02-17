@@ -1,7 +1,0 @@
-[1,"Installing 'mosaicData' ...\n"]
-[2,"trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/contrib/4.4/mosaicData_0.20.4.tgz'\n"]
-[2,"Content type 'application/x-gzip' length 1664710 bytes (1.6 MB)\n=========="]
-[2,"========================================\ndownloaded 1.6 MB\n\n"]
-[1,"The downloaded binary packages are in\n"]
-[1,"\t/var/folders/x5/bw3j8st94h56ssy20mk2xch00000gn/T//RtmpWwoCGg/downloaded_packages\n"]
-[2,"\n\n✔ Package 'mosaicData' successfully installed.\n"]
