@@ -1,29 +1,28 @@
-Lab 06 - Sad plots
+Lab 06 - Ugly charts and Simpson’s paradox
 ================
-Insert your name here
-Insert date here
+Yuxin
+2/17/25
 
 ### Load packages and data
 
 ``` r
 library(tidyverse) 
-library(dsbox) 
+library(dsbox)
+library(mosaicData) 
+staff <- read_csv("data/instructional-staff.csv")
+##Each row in this dataset represents a faculty type, and the columns are the years for which we have data. The values are percentage of hires of that type of faculty for each year.
 ```
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here. Add code
-chunks as needed. Don’t forget to label your code chunk. Do not use
-spaces in code chunk labels.
-
 ### Exercise 2
-
-Remove this text, and add your answer for Exercise 1 here. Add code
-chunks as needed. Don’t forget to label your code chunk. Do not use
-spaces in code chunk labels.
 
 ### Exercise 3
 
-…
+### Exercise 4
 
-Add exercise headings as needed.
+### Exercise 5
+
+### Exercise 6
+
+### Exercise 7
