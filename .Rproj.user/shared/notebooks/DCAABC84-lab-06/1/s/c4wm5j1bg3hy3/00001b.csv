@@ -1,0 +1,4 @@
+"0","Whickham %>%"
+"0","  count(smoker, outcome) %>%"
+"0","  group_by(smoker) %>%"
+"0","  mutate(proportion = n / sum(n))"
